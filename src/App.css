@@ -1,0 +1,26 @@
+/* index.css or App.css */
+html, body {
+  overflow-x: hidden;
+}
+
+@keyframes scroll {
+    
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.pause-on-hover:hover {
+  animation-play-state: paused;
+}
+.media-scroll-bg {
+  background: radial-gradient(circle at 30% center, #250027, #090007);
+}
+
