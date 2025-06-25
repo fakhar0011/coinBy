@@ -37,7 +37,7 @@ const Navbar = () => {
 
             <div className="flex items-center gap-2">
                 <img
-                    src="/src/assets/images/coin-bay-logo.png"
+                    src="https://coinbay-x2ul.onrender.com/assets/logoo-BcEwy0Jc.png"
                     alt="CoinBay Logo"
                     className="h-10 w-auto"
                 />

@@ -8,7 +8,7 @@ const Footer = () => {
         {/* Brand & Social */}
         <div className="col-span-1">
           <div className="flex items-center gap-3 mb-4">
-            <img src="\src\assets\images\coin-bay-logo.png" alt="CoinBay" className="w-44 h-12" />
+            <img src="https://coinbay-x2ul.onrender.com/assets/logoo-BcEwy0Jc.png" alt="CoinBay" className="w-44 h-12" />
           </div>
           <p className="text-[#C3B4CC] mb-6">
             It has survived not only five centuries, but also the electronic

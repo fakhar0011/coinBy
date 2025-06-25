@@ -19,7 +19,7 @@ const About = () => {
         {/* LEFT IMAGE */}
         <div className="flex-1 flex justify-center lg:justify-start">
           <img
-            src="/src/assets/images/history_left_1-BDaYmsQ1.png"
+            src="https://coinbay-x2ul.onrender.com/assets/history_left_1-BDaYmsQ1.png"
             alt="Crypto Wallet"
             className="w-[90%] md:w-[450px] xl:w-[500px] object-contain"
           />

@@ -23,7 +23,7 @@ const JoinCommunity = () => {
         {/* Right Image */}
         <div className="max-w-md w-full">
           <img
-            src="/src/assets/images/joi-community.png"
+            src="https://coinbay-x2ul.onrender.com/assets/cta_img_1-BmGsBMjn.png"
             alt="Join Community Globe"
             className="w-full object-contain"
           />
