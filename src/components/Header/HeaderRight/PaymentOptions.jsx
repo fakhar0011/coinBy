@@ -1,5 +1,5 @@
 import React from "react";
-import { FaEthereum, FaCreditCard } from "react-icons/fa";
+import { FaEthereum } from "react-icons/fa";
 import { SiBinance, SiSolana } from "react-icons/si";
 
 const PaymentOptions = ({ paymentMethod, setPaymentMethod }) => {
