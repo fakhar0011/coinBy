@@ -29,6 +29,7 @@ const RightSection = () => {
     const [amount, setAmount] = useState("");
     const [selectedChain, setSelectedChain] = useState("ethereum");
     const [walletAddress, setWalletAddress] = useState("");
+    const [paymentMethod, setPaymentMethod] = useState("eth");
     const [networkName, setNetworkName] = useState("");
     const [tokenBalance, setTokenBalance] = useState("");
 
@@ -60,22 +61,46 @@ const RightSection = () => {
     return (
         <div className="w-full lg:w-1/2 bg-gradient-to-b from-[#161020] to-[#100518] rounded-2xl shadow-xl hover:border border-purple-700 p-6 space-y-5 text-white">
             <div className="flex justify-between items-center">
-                <h2 className="text-xl font-bold font-[Orbitron]">CoinBay Presale</h2>
+<div className="flex justify-between items-center">
+  <h2 className="text-xl font-bold font-[Orbitron]">CoinBay Presale</h2>
+
+  <div className="flex items-center gap-2">
+    {networkName && (
+      <span className="flex items-center gap-1 bg-gray-700 text-xs px-3 py-1 rounded-full font-semibold">
+        {networkName === "ethereum" && <FaEthereum />}
+        {networkName === "bsc" && <SiBinance />}
+        {networkName === "solana" && <SiSolana />}
+        {networkName.toUpperCase()}
+      </span>
+    )}
+    <span className="bg-purple-600 text-xs px-3 py-1 rounded-full font-semibold">Stage: 4</span>
+  </div>
+</div>
+
                 <span className="bg-purple-600 text-xs px-3 py-1 rounded-full font-semibold">Stage: 4</span>
             </div>
 
             <CountdownTimer />
             <ProgressBar />
-            <NetworkSelector selectedChain={selectedChain} setSelectedChain={setSelectedChain} />
-            <PaymentOptions />
+<NetworkSelector
+  selectedChain={selectedChain}
+  setSelectedChain={(value) => {
+    setSelectedChain(value);
+
+    if (value === "ethereum") setPaymentMethod("eth");
+    else if (value === "solana") setPaymentMethod("solana");
+    else if (value === "bsc") setPaymentMethod("bsc");
+  }}
+/>
+            <PaymentOptions paymentMethod={paymentMethod} setPaymentMethod={setPaymentMethod} />
             <AmountInput amount={amount} setAmount={setAmount} />
             <ConnectWalletButton onClick={connectWallet} />
-            {walletAddress && 
-            <WalletDetails walletAddress={walletAddress}
-             networkName={networkName} tokenBalance={tokenBalance}
-              />}
+            {walletAddress &&
+                <WalletDetails walletAddress={walletAddress}
+                    networkName={networkName} tokenBalance={tokenBalance}
+                />}
             <TokenStats />
-            
+
         </div>
     );
 };
