@@ -70,8 +70,12 @@ const RightSection = () => {
             <PaymentOptions />
             <AmountInput amount={amount} setAmount={setAmount} />
             <ConnectWalletButton onClick={connectWallet} />
-            {walletAddress && <WalletDetails walletAddress={walletAddress} networkName={networkName} tokenBalance={tokenBalance} />}
+            {walletAddress && 
+            <WalletDetails walletAddress={walletAddress}
+             networkName={networkName} tokenBalance={tokenBalance}
+              />}
             <TokenStats />
+            
         </div>
     );
 };

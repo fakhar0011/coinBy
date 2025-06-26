@@ -23,8 +23,7 @@ const LeftSection = () => {
                             and physical products — secured by blockchain, powered by crypto, and
                             open to the world.
                         </p>
-
-                        {/* Buttons */}
+                        
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                             <button className="cursor-pointer bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold px-6 py-3 rounded-lg w-full sm:w-auto">
                                 Get Connected
