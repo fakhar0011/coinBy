@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+
 const NetworkSelector = ({ selectedChain, setSelectedChain }) => (
   <div>
     <label className="block text-sm text-gray-300 mb-1">Select Network:</label>
